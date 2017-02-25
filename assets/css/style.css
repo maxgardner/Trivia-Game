@@ -1,0 +1,28 @@
+.container {
+	margin-top: 100px;
+}
+
+#time-left {
+	font-size: 36px;
+}
+
+#gameboard {
+	margin: 0 auto;
+	max-width: 50%;
+	text-align: left;
+}
+
+.question {
+	padding: 20px 0;
+	margin: 20px 0;
+}
+
+.answer-choice {
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.result-text {
+	padding: 40px;
+	text-align: center;
+}
