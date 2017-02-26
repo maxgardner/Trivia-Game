@@ -1,6 +1,6 @@
 // Game variables
 
-var time = 10;
+var time;
 var questions = [
 	{
 		q: "Which band sang <em>I Hate Everything About You</em>?",
@@ -60,8 +60,7 @@ function timer() {
 		clearInterval(timeInterval);
 		noAnswer++;
 		var newDiv = $("<div/>").html("Step it up molasses hands. Maybe try actually picking an answer next time.").attr("class", "result-text");
-		$("#gameboard").html(newDiv)
-		time = 10;
+		$("#gameboard").html(newDiv);
 		setTimeout(setGame, 3000);
 	} else if (time < 10) {
 		$("#time-left").html("00:0" + time);
@@ -78,7 +77,7 @@ function setGame() {
 	clearInterval(timeInterval);
 
 	if (time <= 0) {
-		gameInterval = setInterval(setGame, 10000);
+		gameInterval = setInterval(setGame, 20000);
 	}
 
 	if (questions.length === 0) {
@@ -89,7 +88,7 @@ function setGame() {
 		return;
 	}
 	
-	time = 10;
+	time = 20;
 	$("#gameboard").empty();
 	$("#time-left").html("00:" + time);
 
@@ -108,7 +107,7 @@ function setGame() {
 
 function resetGame() {
 	usedQuestions = [];
-	time = 10;
+	time = 20;
 	score = 0;
 	wrongAnswers = 0;
 	noAnswer = 0;
